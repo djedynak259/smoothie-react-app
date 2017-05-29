@@ -7,6 +7,10 @@ import {
   Route
 } from 'react-router-dom';
 
+var Home = () => (
+  <div>To get started, edit <code>src/App.js</code> and save to reloadddd.</div>
+)
+
 var AboutUs = () => (
   <div>About Us</div>
 )
@@ -21,7 +25,7 @@ class App extends Component {
             <h2>Welcome to React, testt</h2>
           </div>
           <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
+            <Route path='/' exact component = {Home} />
             <Route path='/aboutus' component = {AboutUs} />
           </p>
         </div>
