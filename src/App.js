@@ -30,7 +30,7 @@ class App extends Component {
   }
 }
 
-// Clocl
+// Clock
 
 class Clock extends React.Component {
   constructor(props) {
