@@ -35,7 +35,7 @@ class App extends Component {
 class Clock extends Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = {date: new Date().toLocaleTimeString()};
   }
 
   componentDidMount() {
@@ -51,7 +51,7 @@ class Clock extends Component {
 
   tick() {
     this.setState({
-      date: new Date()
+      date: new Date().toLocaleTimeString()
     });
   }
 
@@ -59,7 +59,7 @@ class Clock extends Component {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        <h2>It is {this.state.date}.</h2>
       </div>
     );
   }
