@@ -32,7 +32,7 @@ class App extends Component {
 
 // Clock
 
-class Clock extends React.Component {
+class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {date: new Date()};
