@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Clock from './Clock.js'
 
 const hi = <p>Test element here - insert text</p>;
 
@@ -25,41 +26,6 @@ class App extends Component {
           <Intro name='Dan'/>
           {hi}
         <Clock />
-      </div>
-    );
-  }
-}
-
-// Clock
-
-class Clock extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {date: new Date().toLocaleTimeString()};
-  }
-
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({
-      date: new Date().toLocaleTimeString()
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {this.state.date}.</h2>
       </div>
     );
   }
