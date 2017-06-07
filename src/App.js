@@ -8,9 +8,14 @@ import Page from './Page.js';
 import LoginControl from './LoginControl.js';
 import Greeting from './Greeting.js';
 import NumberList from './NumberList.js';
+import Blog from './Blog.js';
 
 const hi = <p>Test element here - insert text</p>;
 const messages = ['React', 'Re: React', 'Re:Re: React'];
+const posts = [
+  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
 const numbers = [1, 2, 3, 4, 5];
 
 class Intro extends Component {
@@ -41,6 +46,7 @@ class App extends Component {
         <Mailbox unreadMessages={messages}/>
         <Page />
         <NumberList numbers={numbers}/>
+        <Blog posts={posts} />
       </div>
     );
   }
