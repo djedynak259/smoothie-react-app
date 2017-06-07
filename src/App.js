@@ -9,6 +9,7 @@ import LoginControl from './LoginControl.js';
 import Greeting from './Greeting.js';
 import NumberList from './NumberList.js';
 import Blog from './Blog.js';
+import NameForm from './NameForm.js';
 
 const hi = <p>Test element here - insert text</p>;
 const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -47,6 +48,7 @@ class App extends Component {
         <Page />
         <NumberList numbers={numbers}/>
         <Blog posts={posts} />
+        <NameForm />
       </div>
     );
   }
