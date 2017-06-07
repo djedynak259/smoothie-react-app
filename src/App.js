@@ -4,6 +4,7 @@ import './App.css';
 import Clock from './Clock.js';
 import Toggle from './Toggle.js';
 import Mailbox from './Mailbox.js';
+import Page from './Page.js';
 
 const hi = <p>Test element here - insert text</p>;
 const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -28,11 +29,13 @@ class App extends Component {
         </div>
           <Intro name='Dan'/>
           {hi}
+          {messages}
         <Clock />
         <Toggle />
         <Greeting isLoggedIn={false}/>
         <LoginControl />
         <Mailbox unreadMessages={messages}/>
+        <Page />
       </div>
     );
   }
@@ -115,6 +118,9 @@ class LoginControl extends React.Component {
       <div>
         <Greeting isLoggedIn={isLoggedIn} />
         {button}
+        <p>
+          The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+        </p>
       </div>
     );
   }
