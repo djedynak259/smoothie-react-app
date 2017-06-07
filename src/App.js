@@ -60,7 +60,8 @@ class Greeting extends React.Component {
 }
 
 
-// Login Control
+// Login Control uses two different button classes and an 
+// if statement in the render
 
 class LoginButton extends Component {
   render() {

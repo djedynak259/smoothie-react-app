@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Toggle Button
+// Toggle Button uses one button class and a ternary in render
 
 class Toggle extends React.Component {
   constructor(props) {
