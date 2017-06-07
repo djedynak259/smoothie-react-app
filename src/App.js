@@ -7,9 +7,11 @@ import Mailbox from './Mailbox.js';
 import Page from './Page.js';
 import LoginControl from './LoginControl.js';
 import Greeting from './Greeting.js';
+import NumberList from './NumberList.js';
 
 const hi = <p>Test element here - insert text</p>;
 const messages = ['React', 'Re: React', 'Re:Re: React'];
+const numbers = [1, 2, 3, 4, 5];
 
 class Intro extends Component {
   render() {
@@ -38,6 +40,7 @@ class App extends Component {
         <LoginControl />
         <Mailbox unreadMessages={messages}/>
         <Page />
+        <NumberList numbers={numbers}/>
       </div>
     );
   }
