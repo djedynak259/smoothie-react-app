@@ -3,8 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import Clock from './Clock.js';
 import Toggle from './Toggle.js';
+import Mailbox from './Mailbox.js';
 
 const hi = <p>Test element here - insert text</p>;
+const messages = ['React', 'Re: React', 'Re:Re: React'];
 
 class Intro extends Component {
   render() {
@@ -30,10 +32,12 @@ class App extends Component {
         <Toggle />
         <Greeting isLoggedIn={false}/>
         <LoginControl />
+        <Mailbox unreadMessages={messages}/>
       </div>
     );
   }
 }
+
 
 // Greeting
 
