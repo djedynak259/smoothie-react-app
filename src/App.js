@@ -27,7 +27,7 @@ class App extends Component {
           {hi}
         <Clock />
         <Toggle />
-        <Greeting isLoggedIn={false} />
+        <Greeting isLoggedIn={false}/>
         <LoginControl />
       </div>
     );
@@ -89,13 +89,15 @@ class Greeting extends React.Component {
 
 // Login Control
 
-function LoginButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Login
-    </button>
-  );
-}
+class LoginButton extends Component {
+  render() {
+    return (
+      <button onClick={this.props.onClick}>
+        Login
+      </button>
+    );
+  }
+}  
 
 function LogoutButton(props) {
   return (
