@@ -5,6 +5,8 @@ import Clock from './Clock.js';
 import Toggle from './Toggle.js';
 import Mailbox from './Mailbox.js';
 import Page from './Page.js';
+import LoginControl from './LoginControl.js';
+import Greeting from './Greeting.js';
 
 const hi = <p>Test element here - insert text</p>;
 const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -36,91 +38,6 @@ class App extends Component {
         <LoginControl />
         <Mailbox unreadMessages={messages}/>
         <Page />
-      </div>
-    );
-  }
-}
-
-
-// Greeting
-
-class UserGreeting extends React.Component {
-  render () {
-    return <h1>Welcome back!</h1>;
-  }
-}
-
-class GuestGreeting extends React.Component {
-  render () {
-    return <h1>Please sign up.</h1>;
-  }
-}  
-
-class Greeting extends React.Component {
-  render()  {
-    const isLoggedIn = this.props.isLoggedIn;
-    if (isLoggedIn) {
-      return <UserGreeting />;
-    }
-    return <GuestGreeting />;
-  }
-}
-
-
-// Login Control uses two different button classes and an 
-// if statement in the render
-
-class LoginButton extends Component {
-  render() {
-    return (
-      <button onClick={this.props.onClick}>
-        Login
-      </button>
-    );
-  }
-}  
-
-function LogoutButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Logout
-    </button>
-  );
-}
-
-class LoginControl extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleLoginClick = this.handleLoginClick.bind(this);
-    this.handleLogoutClick = this.handleLogoutClick.bind(this);
-    this.state = {isLoggedIn: false};
-  }
-
-  handleLoginClick() {
-    this.setState({isLoggedIn: true});
-  }
-
-  handleLogoutClick() {
-    this.setState({isLoggedIn: false});
-  }
-
-  render() {
-    const isLoggedIn = this.state.isLoggedIn;
-
-    let button = null;
-    if (isLoggedIn) {
-      button = <LogoutButton onClick={this.handleLogoutClick} />;
-    } else {
-      button = <LoginButton onClick={this.handleLoginClick} />;
-    }
-
-    return (
-      <div>
-        <Greeting isLoggedIn={isLoggedIn} />
-        {button}
-        <p>
-          The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
-        </p>
       </div>
     );
   }
