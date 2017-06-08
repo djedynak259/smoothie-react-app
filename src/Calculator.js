@@ -1,11 +1,6 @@
 import React from 'react';
 
 
-const scaleNames = {
-  c: 'Celsius',
-  f: 'Fahrenheit'
-};
-
 function BoilingVerdict(props) {
   if (props.celsius >= 100) {
     return <p>The water would boil.</p>;
@@ -42,14 +37,18 @@ class TemperatureInput extends React.Component {
   }
 
   render() {
+    const scaleNames = {
+      c: 'Celsius',
+      f: 'Fahrenheit'
+    };
     const temperature = this.props.temperature;
     const scale = this.props.scale;
     return (
-      <fieldset>
-        <legend>Enter temperature in {scaleNames[scale]}:</legend>
+      <div>
+        <p>Enter temperature in {scaleNames[scale]}:</p>
         <input value={temperature}
                onChange={this.handleChange} />
-      </fieldset>
+      </div>
     );
   }
 }
