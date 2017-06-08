@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Clock from './Clock.js';
-import Toggle from './Toggle.js';
-import Mailbox from './Mailbox.js';
-import Page from './Page.js';
-import LoginControl from './LoginControl.js';
-import Greeting from './Greeting.js';
-import NumberList from './NumberList.js';
-import Blog from './Blog.js';
-import NameForm from './NameForm.js';
-import FlavorForm from './FlavorForm.js';
-import Reservation from './Reservation.js';
-import Calculator from './Calculator.js';
-import SignUpDialog from './SignUpDialog.js';
+import Clock from './Components/Clock.js';
+import Toggle from './Components/Toggle.js';
+import Mailbox from './Components/Mailbox.js';
+import Page from './Components/Page.js';
+import LoginControl from './Components/LoginControl.js';
+import Greeting from './Components/Greeting.js';
+import NumberList from './Components/NumberList.js';
+import Blog from './Components/Blog.js';
+import NameForm from './Components/NameForm.js';
+import FlavorForm from './Components/FlavorForm.js';
+import Reservation from './Components/Reservation.js';
+import Calculator from './Components/Calculator.js';
+import SignUpDialog from './Components/SignUpDialog.js';
+
+
+// Constants
 
 const hi = <p>Test element here - insert text</p>;
 const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -33,6 +36,9 @@ class Intro extends Component {
     );
   }
 }
+
+
+// App
 
 class App extends Component {
   render() {
