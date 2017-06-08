@@ -12,6 +12,7 @@ import Blog from './Blog.js';
 import NameForm from './NameForm.js';
 import FlavorForm from './FlavorForm.js';
 import Reservation from './Reservation.js';
+import Calculator from './Calculator.js';
 
 const hi = <p>Test element here - insert text</p>;
 const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -20,6 +21,7 @@ const posts = [
   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
 ];
 const numbers = [1, 2, 3, 4, 5];
+
 
 class Intro extends Component {
   render() {
@@ -53,6 +55,7 @@ class App extends Component {
         <NameForm />
         <FlavorForm />
         <Reservation />
+        <Calculator />
       </div>
     );
   }
