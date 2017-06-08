@@ -13,6 +13,7 @@ import NameForm from './NameForm.js';
 import FlavorForm from './FlavorForm.js';
 import Reservation from './Reservation.js';
 import Calculator from './Calculator.js';
+import SignUpDialog from './SignUpDialog.js';
 
 const hi = <p>Test element here - insert text</p>;
 const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -56,6 +57,7 @@ class App extends Component {
         <FlavorForm />
         <Reservation />
         <Calculator />
+        <SignUpDialog />
       </div>
     );
   }
