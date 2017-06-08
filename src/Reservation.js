@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Reservation extends React.Component {
+class Reservation extends Component {
   constructor(props) {
     super(props);
     this.state = {
