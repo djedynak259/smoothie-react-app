@@ -14,6 +14,8 @@ import FlavorForm from './Components/FlavorForm.js';
 import Reservation from './Components/Reservation.js';
 import Calculator from './Components/Calculator.js';
 import SignUpDialog from './Components/SignUpDialog.js';
+import Intro from './Components/Intro.js';
+
 
 
 // Constants
@@ -26,16 +28,6 @@ const posts = [
 ];
 const numbers = [1, 2, 3, 4, 5];
 
-
-class Intro extends Component {
-  render() {
-    return (
-        <p className="App-intro">
-          Hi {this.props.name},to get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-    );
-  }
-}
 
 
 // App
